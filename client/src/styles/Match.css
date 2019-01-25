@@ -26,3 +26,11 @@
 	margin: 10px auto;
 	border-radius: 10px;
 }
+
+.match .runes {
+	padding-top: 7px;
+}
+
+#bottomRune {
+	padding-top: 18px;
+}

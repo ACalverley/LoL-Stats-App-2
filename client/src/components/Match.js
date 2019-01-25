@@ -20,9 +20,9 @@ export default class Match extends Component {
               <img src={process.env.PUBLIC_URL + 'client/public/resources/img/' + this.props.matchData.spells[0]}  alt="" />
               <img src={process.env.PUBLIC_URL + 'client/public/resources/img/' + this.props.matchData.spells[1]}  alt="" />
             </Col>
-            <Col xs={2}>
+            <Col xs={2} className='runes'>
               <img src={process.env.PUBLIC_URL + 'client/public/resources/img/' + this.props.matchData.runes[0]}  alt="" />
-              <img src={process.env.PUBLIC_URL + 'client/public/resources/img/' + this.props.matchData.runes[1]}  alt="" />
+              <img id='bottomRune' src={process.env.PUBLIC_URL + 'client/public/resources/img/' + this.props.matchData.runes[1]}  alt="" />
             </Col>
             <Col xs={8}>
               <Champion champIcon={this.props.matchData.champ}
@@ -48,9 +48,10 @@ export default class Match extends Component {
         <Row className='bottomRow'>
           <Col xs={2}>
             <p className='statsHeader'>Game Stats:</p>
+            <p>{this.props.matchData.win ? 'Victory!' : 'Defeat...'}</p>
           </Col>
           <Col xs={10}>
-            <Stats win={this.props.matchData.win}
+            <Stats gameDuration={this.props.matchData.gameDuration}
                   KDA={this.props.matchData.KDA}
                   csScore={this.props.matchData.totalCS}
                   csMin={this.props.matchData.csMin}

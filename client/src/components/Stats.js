@@ -8,17 +8,17 @@ export default class Stats extends Component {
     return (
       <div className='stats'>
       	<div className='col'>
-      		<p>{this.props.win ? 'Victory!' : 'Defeat...'}</p>
+      		<p>{this.props.gameDuration} minutes</p>
       		<p>KDA: {this.props.KDA}</p>
       	</div>
-		<div className='col'>
-			<p>Kills: {this.props.kills}</p>
-			<p>Assists: {this.props.assists}</p>
-		</div>
-		<div className='col'>
-			<p>Deaths: {this.props.deaths}</p>
-			<p>CS Score: {this.props.csScore} ({this.props.csMin}/min)</p>
-		</div>
+    		<div className='col'>
+    			<p>Kills: {this.props.kills}</p>
+    			<p>Assists: {this.props.assists}</p>
+    		</div>
+    		<div className='col'>
+    			<p>Deaths: {this.props.deaths}</p>
+    			<p>CS Score: {this.props.csScore} ({this.props.csMin}/min)</p>
+    		</div>
       </div>
     );
   }
