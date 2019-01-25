@@ -1,0 +1,11 @@
+.champion {
+	padding-left: 10px;
+}
+
+.champion p {
+	font-weight: 700;
+}
+
+.champion img {
+	min-width: 85px;
+}

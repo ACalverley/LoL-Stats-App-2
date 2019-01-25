@@ -1,0 +1,28 @@
+.match {
+	max-width: 800px;
+	margin: 30px auto;
+	background-color: #a7d5f2;
+	border-radius: 30px;
+	display: table;
+}
+
+.match .bottomRow {
+	padding-top: 10px;
+	background-color: #c4e8fc;
+	border-radius: 30px;
+}
+
+.match p {
+	font-size: 15px;
+}
+
+.match .statsHeader {
+	font-weight: 600;
+}
+
+.match img {
+	display: block;
+	max-width: 50px;
+	margin: 10px auto;
+	border-radius: 10px;
+}

@@ -1,0 +1,37 @@
+#Table {
+	margin: 0 auto;
+	max-width: 900px;
+	background-color: #ddd;
+	border-radius: 30px;
+	border-color: transparent;
+}
+
+/*td {
+	padding-top: 10px;
+}*/
+
+.profile {
+	max-width: 50px;
+	border-radius: 5px;
+}
+
+.champ {
+	max-width: 80px;
+	border-radius: 10px;
+	margin-top: 15px;
+}
+
+.item {
+	max-width: 50px;
+	border-radius: 5px;
+}
+
+.spell {
+	max-width: 50px;
+	border-radius: 5px;
+}
+
+.rune {
+	max-width: 50px;
+	border-radius: 5px;
+}

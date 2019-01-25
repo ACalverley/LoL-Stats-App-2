@@ -1,0 +1,9 @@
+.stats .col {
+	width: 33.33%;
+	display: inline-block;
+}
+
+.stats .col p {
+	text-align: left;
+	padding-left: 15px;
+}

@@ -1,0 +1,9 @@
+.profile img {
+	min-width: 60px;
+}
+
+.profile .summoner {
+	padding-top: 15px;
+	font-size: 12px;
+	font-style: italic;
+}

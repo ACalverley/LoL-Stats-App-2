@@ -1,0 +1,13 @@
+.LoginForm .container{
+	margin: 0 auto;
+	max-width: 500px;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+.LoginForm .submit {
+	margin: 25px auto;
+	max-width: 300px;
+	display: inline-block;
+}
+
