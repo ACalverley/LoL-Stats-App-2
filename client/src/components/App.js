@@ -39,7 +39,7 @@ class App extends Component {
                               numMatches: numMatches}),
       });
 
-      console.log("got response from server");
+      // console.log("got response from server");
 
       const body = await response.json();
       this.setState({ matches: body.data.matches });

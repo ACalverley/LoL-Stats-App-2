@@ -4,7 +4,6 @@ import '../styles/Profile.css';
 
 export default class Profile extends Component {
   render() {
-    console.log(this.props.summonerName);
     return (
       <div className='profile'>
       	<p className='summoner'>{this.props.summonerName}</p>
