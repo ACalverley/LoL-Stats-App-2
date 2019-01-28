@@ -147,12 +147,11 @@ app.post('/login', async (req, res) => {
     });
 
     // console.log("no error");
-    // console.log(allMatchData);
     res.send({data: allMatchData});
 
   } catch (e) {
-    console.log(e);
-    res.sendStatus(404);
+    console.log(e.statusCode);
+    res.sendStatus(e.statusCode);
   }
 });
 

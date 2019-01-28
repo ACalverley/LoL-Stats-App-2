@@ -30,7 +30,7 @@ class App extends Component {
     this.setState({ numMatches: numMatches })
 
     try {
-      const response = await fetch('/login', {
+      const getData = await fetch('/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,15 +40,25 @@ class App extends Component {
       });
 
       // console.log("got response from server");
-
-      const body = await response.json();
-      this.setState({ matches: body.data.matches });
-      this.setState({ notFoundError: '' });
-      this.setState({ isLoggedIn: true });
+      const response = await getData;
+      // console.log(response);
+      
+      if (response.status === 200) {
+        this.setState({ matches: response.body.data.matches });
+        this.setState({ notFoundError: '' });
+        this.setState({ isLoggedIn: true });
+      } else if (response.status === 404) {
+        this.setState({ notFoundError: "Summoner name could not be found!" });
+        this.setState({ isLoggedIn: false });
+      } else {
+        this.setState({ notFoundError: "An error occured: " + response.statusText + " (" + response.status + ")" });
+        this.setState({ isLoggedIn: false });
+      }
     
     } catch (e) {
       console.log(e);
-      this.setState({ notFoundError: "The summoner name could not be found!"});
+      // this.setState({ notFoundError: e.message });
+      this.setState({ notFoundError: "Unexpected error occured!"});
     }
     
     this.setState({ summonerName: '' });
